@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produtos | Loja Diversa</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <h1 class="logo">Loja Diversa</h1>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">Início</a>
+      <a href="../users/users.html" class="nav-link">Usuários</a>
+      <a href="products.html" class="nav-link">Produtos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Seção do formulário -->
+  <section class="card">
+    <h2 style="margin-bottom:6px;"><strong>Cadastrar Produto 🛒</strong></h2>
+    <p class="small">Preencha os campos abaixo para adicionar um novo produto ao catálogo.</p>
+
+    <form id="productForm" class="form-grid" novalidate>
+
+      <div class="field">
+        <label>Título</label>
+        <input name="title" class="input" placeholder="Ex: Creme facial hidratante">
+      </div>
+
+      <div class="field">
+        <label>Marca</label>
+        <input name="brand" class="input" placeholder="Ex: Nivea">
+      </div>
+
+      <div class="field" style="grid-column:1/-1">
+        <label>Descrição</label>
+        <textarea name="description" class="input" placeholder="Ex: Hidrata e suaviza a pele"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Preço (R$)</label>
+        <input name="price" class="input" type="number" placeholder="Ex: 49.99">
+      </div>
+
+      <div class="field">
+        <label>Categoria</label>
+        <input name="category" class="input" placeholder="Ex: Cosméticos">
+      </div>
+
+      <div class="field" style="grid-column:1/-1">
+        <label>Foto (URL opcional)</label>
+        <input name="thumbnail" class="input" placeholder="https://exemplo.com/imagem.jpg">
+      </div>
+
+      <button class="btn" style="grid-column:1/-1">➕ Adicionar Produto</button>
+      <button type="button" id="refreshProductsBtn" class="btn secondary" style="grid-column:1/-1">🔄 Recarregar da API</button>
+
+    </form>
+  </section>
+
+  <!-- LISTA MELHORADA -->
+  <section style="margin-top:35px">
+    <h2>Produtos cadastrados 📦</h2>
+    <p class="small">Clique no botão remover para excluir um item.</p>
+
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 - Projeto Front-End II</p>
+</footer>
+
+<script src="../main.js"></script>
+<script src="products.js"></script>
+</body>
+</html>

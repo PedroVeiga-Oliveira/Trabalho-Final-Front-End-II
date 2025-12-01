@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Usuários | Loja Diversa</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <h1 class="logo">Loja Diversa</h1>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">Início</a>
+      <a href="users.html" class="nav-link">Usuários</a>
+      <a href="../products/products.html" class="nav-link">Produtos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2><strong>Gerenciamento de Usuários 👤</strong></h2>
+    <p class="small">Carregado via API: <code>https://dummyjson.com/users</code></p>
+
+    <form id="userForm" class="form-grid" novalidate>
+      <div class="field">
+        <label>Nome</label>
+        <input name="firstName" class="input">
+      </div>
+
+      <div class="field">
+        <label>Sobrenome</label>
+        <input name="lastName" class="input">
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input name="email" class="input">
+      </div>
+
+      <div class="field">
+        <label>Idade</label>
+        <input name="age" class="input" type="number">
+      </div>
+
+      <div class="field" style="grid-column:1/-1">
+        <label>Foto (URL opcional)</label>
+        <input name="image" class="input" placeholder="https://...">
+      </div>
+
+      <button class="btn" style="grid-column:1/-1">Adicionar Usuário</button>
+      <button type="button" id="refreshBtn" class="btn secondary" style="grid-column:1/-1">🔄 Recarregar Dados API</button>
+    </form>
+  </section>
+
+  <section style="margin-top:30px;">
+    <h3>Lista de Usuários</h3>
+    <div id="userList" class="list"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 - Projeto Front-End II</p>
+</footer>
+
+<script src="../main.js"></script>
+<script src="users.js"></script>
+</body>
+</html>
+
+
